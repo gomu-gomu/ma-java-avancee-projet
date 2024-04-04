@@ -1,0 +1,3 @@
+[submodule "src/modules/ma-java-avancee-projet-backend"]
+	path = src/modules/ma-java-avancee-projet-backend
+	url = git@github.com:gomu-gomu/ma-java-avancee-projet-backend.git
