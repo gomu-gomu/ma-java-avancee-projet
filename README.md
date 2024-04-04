@@ -6,9 +6,8 @@ Source code is under the [src](./src/) folder
 
 ## Usage
 
-Project can be run via:
+The project can be run via:
 
 ```sh
-cd src
-docker compose up
+./scripts/start.sh
 ```
