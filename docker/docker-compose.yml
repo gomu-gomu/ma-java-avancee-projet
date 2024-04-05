@@ -1,20 +1,20 @@
 version: '3.8'
 
 services:
-  # backend:
-  #   image: gomu-gomu/ma-java-avancee-projet-backend:0.0.1
-  #   build:
-  #     dockerfile: ./docker/Dockerfile
-  #     context: ./../src/modules/ma-java-avancee-projet-backend
-  #   ports:
-  #     - "8080:8080"
-  #   command: ["scripts/run.sh"]
-  #   environment:
-  #     - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL}
-  #     - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME}
-  #     - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
-  #   depends_on:
-  #     - db
+  backend:
+    image: gomu-gomu/ma-java-avancee-projet-backend:0.0.1
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: ./../src/modules/ma-java-avancee-projet-backend
+    ports:
+      - "8080:8080"
+    command: ["scripts/run.sh"]
+    environment:
+      - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL}
+      - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME}
+      - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+    depends_on:
+      - db
   pgadmin:
     image: dpage/pgadmin4
     environment:
