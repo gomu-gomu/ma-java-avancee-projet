@@ -27,15 +27,6 @@ services:
       - POSTGRES_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
     depends_on:
       - db
-  pgadmin:
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: usr@usr.com
-      PGADMIN_DEFAULT_PASSWORD: pwd
-    ports:
-      - "5050:80"
-    depends_on:
-      - seed
   db:
     image: postgres:latest
     environment:
@@ -47,5 +38,27 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: usr@usr.com
+      PGADMIN_DEFAULT_PASSWORD: pwd
+    ports:
+      - "5050:80"
+    depends_on:
+      - seed
+  yaade:
+    image: esperotech/yaade:latest
+    restart: always
+    ports:
+      - "9339:9339"
+    environment:
+      YAADE_ADMIN_USERNAME: usr
+    depends_on:
+      - backend
+    volumes:
+      - yaade:/app/data
+
 volumes:
+  yaade:
   postgres_data:
