@@ -6,6 +6,12 @@ Source code is under the [src](./src/) folder
 
 ## Usage
 
+Be sure to recursively clone the submodules
+
+```sh
+git submodule update --init --recursive
+```
+
 The project can be run via:
 
 ```sh
