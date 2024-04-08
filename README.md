@@ -17,3 +17,18 @@ The project can be run via:
 ```sh
 ./scripts/start.sh
 ```
+
+# Services
+
+* [**Backend**](https://github.com/gomu-gomu/ma-java-avancee-projet-backend): Java-based application service.
+* [**Seed**](https://github.com/gomu-gomu/ma-java-avancee-projet-seed): Initializes the database with necessary data.
+* **DB**: PostgreSQL database service.
+* **pgAdmin**: Web-based PostgreSQL management tool.
+* **YAADE**: Yet Another API Development Environment, an API testing tool.
+
+| Service      | URL                    | Description                      |
+|--------------|------------------------|----------------------------------|
+| **Backend**  | http://localhost:8080  | Access to the Java-based backend |
+| **DB**       | http://localhost:5432  | PostgreSQL database service      |
+| **pgAdmin**  | http://localhost:5050  | Web-based PostgreSQL management  |
+| **YAADE**    | http://localhost:9339  | API testing tool                 |
