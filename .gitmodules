@@ -4,3 +4,6 @@
 [submodule "src/modules/ma-java-avancee-projet-seed"]
 	path = src/modules/ma-java-avancee-projet-seed
 	url = git@github.com:gomu-gomu/ma-java-avancee-projet-seed.git
+[submodule "src/modules/ma-java-avancee-projet-frontend"]
+	path = src/modules/ma-java-avancee-projet-frontend
+	url = git@github.com:gomu-gomu/ma-java-avancee-projet-frontend.git
