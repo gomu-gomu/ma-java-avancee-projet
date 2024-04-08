@@ -26,9 +26,11 @@ The project can be run via:
 * **pgAdmin**: Web-based PostgreSQL management tool.
 * **YAADE**: Yet Another API Development Environment, an API testing tool.
 
-| Service      | URL                    | Description                      |
-|--------------|------------------------|----------------------------------|
-| **Backend**  | http://localhost:8080  | Access to the Java-based backend |
-| **DB**       | http://localhost:5432  | PostgreSQL database service      |
-| **pgAdmin**  | http://localhost:5050  | Web-based PostgreSQL management  |
-| **YAADE**    | http://localhost:9339  | API testing tool                 |
+| Service      | URL                                                  | Description                      |
+|--------------|------------------------------------------------------|----------------------------------|
+| **Backend**  | http://localhost:8080/api/<endpoint>                 | Access to the Java-based backend |
+| **Backend**  | http://localhost:8080/api/swagger-ui/index.html      | Access to Swagger                |
+| **Backend**  | http://localhost:8080/api/v3/api-docs                | Access to OpenAPI description    |
+| **DB**       | http://localhost:5432                                | PostgreSQL database service      |
+| **pgAdmin**  | http://localhost:5050                                | Web-based PostgreSQL management  |
+| **YAADE**    | http://localhost:9339                                | API testing tool                 |
