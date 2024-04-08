@@ -18,7 +18,7 @@ The project can be run via:
 ./scripts/start.sh
 ```
 
-# Services
+## Services
 
 * [**Backend**](https://github.com/gomu-gomu/ma-java-avancee-projet-backend): Java-based application service.
 * [**Seed**](https://github.com/gomu-gomu/ma-java-avancee-projet-seed): Initializes the database with necessary data.
@@ -28,9 +28,10 @@ The project can be run via:
 
 | Service      | URL                                                  | Description                      |
 |--------------|------------------------------------------------------|----------------------------------|
+| **Frontend** | http://localhost:3000                                | Access to the web app client     |
 | **Backend**  | http://localhost:8080/api/<endpoint>                 | Access to the Java-based backend |
-| **Backend**  | http://localhost:8080/api/swagger-ui/index.html      | Access to Swagger                |
-| **Backend**  | http://localhost:8080/api/v3/api-docs                | Access to OpenAPI description    |
+| **Swagger**  | http://localhost:8080/api/swagger-ui/index.html      | Access to Swagger                |
+| **OpenAPI**  | http://localhost:8080/api/v3/api-docs                | Access to OpenAPI description    |
 | **DB**       | http://localhost:5432                                | PostgreSQL database service      |
 | **pgAdmin**  | http://localhost:5050                                | Web-based PostgreSQL management  |
 | **YAADE**    | http://localhost:9339                                | API testing tool                 |
