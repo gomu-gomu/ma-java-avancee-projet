@@ -21,6 +21,7 @@ The project can be run via:
 ## Services
 
 * [**Backend**](https://github.com/gomu-gomu/ma-java-avancee-projet-backend): Java-based application service.
+* [**Seed**](https://github.com/gomu-gomu/ma-java-avancee-projet-frontend): Initializes web app service.
 * [**Seed**](https://github.com/gomu-gomu/ma-java-avancee-projet-seed): Initializes the database with necessary data.
 * **DB**: PostgreSQL database service.
 * **pgAdmin**: Web-based PostgreSQL management tool.
