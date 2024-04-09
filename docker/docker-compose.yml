@@ -1,8 +1,18 @@
 version: '3.8'
 
 services:
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=${SPRING_DATASOURCE_DB}
+      - POSTGRES_USER=${SPRING_DATASOURCE_USERNAME}
+      - POSTGRES_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
   backend:
-    image: gomu-gomu/ma-java-avancee-projet-backend:0.0.1
+    image: gomu-gomu/ma-java-avancee-projet-backend:0.0.1-prod
     build:
       dockerfile: ./docker/Dockerfile
       context: ./../src/modules/ma-java-avancee-projet-backend
@@ -15,8 +25,17 @@ services:
       - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
     depends_on:
       - seed
+  frontend:
+    image: gomu-gomu/ma-java-avancee-projet-frontend:0.0.1-prod
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: ./../src/modules/ma-java-avancee-projet-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
   seed:
-    image: gomu-gomu/ma-java-avancee-projet-seed:0.0.1
+    image: gomu-gomu/ma-java-avancee-projet-seed:0.0.1-prod
     build:
       dockerfile: ./docker/Dockerfile
       context: ./../src/modules/ma-java-avancee-projet-seed
@@ -27,17 +46,6 @@ services:
       - POSTGRES_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
     depends_on:
       - db
-  db:
-    image: postgres:latest
-    environment:
-      - POSTGRES_DB=${SPRING_DATASOURCE_DB}
-      - POSTGRES_USER=${SPRING_DATASOURCE_USERNAME}
-      - POSTGRES_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
   pgadmin:
     image: dpage/pgadmin4
     environment:
