@@ -29,8 +29,8 @@ The project can be run via:
 
 | Service      | URL                                                  | Description                      |
 |--------------|------------------------------------------------------|----------------------------------|
+| **Backend**  | http://localhost:8080/api/<endpoint>                 | Access to the API                |
 | **Frontend** | http://localhost:3000                                | Access to the web app client     |
-| **Backend**  | http://localhost:8080/api/<endpoint>                 | Access to the Java-based backend |
 | **DB**       | http://localhost:5432                                | PostgreSQL database service      |
 | **pgAdmin**  | http://localhost:5050                                | Web-based PostgreSQL management  |
 | **YAADE**    | http://localhost:9339                                | API testing tool                 |
